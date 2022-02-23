@@ -1,0 +1,122 @@
+/* Primary */
+/* graphic design text */
+/* photography text */
+/* footer */
+/* Neutral */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration:none;
+    color: #202020;
+}
+.btn-header{
+
+        margin: 16px 0;
+        padding: 12px 28px;
+        
+        color: hsl(212, 27%, 19%);
+        background-color: hsl(51, 100%, 49%);
+                
+        border-radius: 25px;
+        
+        text-transform: uppercase;
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 0.95em;
+    }
+/* Header */
+.heroe{
+    
+    background-image: url('../images/mobile/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;   
+    background-size: cover;   
+    height:100vh;
+}
+.heroe__title{
+        display:flex;
+        flex-direction: column;        
+        justify-content: center;
+        align-items: center;
+
+        height:80vh
+
+    
+    }
+.heroe__title h1{
+            margin-bottom: 50px;
+            
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 2.8em;
+            letter-spacing: 4px;
+            color:white;
+        }
+.header__wrapper{
+        position:relative;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;               
+                   
+        padding:0 30px;
+        height: 12vh;        
+
+    }
+.header__marca{
+    
+    }
+.header__menu-mobile{        
+
+        position: absolute;
+        top: 315%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        max-width: 300px;
+        padding: 20px 0;
+        background-color: white                     
+
+    }
+.header__menu-mobile:before{
+            position: absolute;
+            top: -18px;
+            right: -1px;
+
+            content: "";
+            width:50px;
+            height:50px;
+            background-color: hsl(0, 0%, 100%);
+
+            -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+
+                    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        }
+.header__menu-burger-input{
+        display:none;
+    }
+.header__menu-burger-input:checked + .header__menu-mobile{
+        display:flex;
+    }
+.header__menu-mobile-link{
+        color: hsl(232, 10%, 55%);
+        margin: 16px 0;
+        font-weight: 600;
+        font-family: 'Barlow', sans-serif;
+    }
+@media(min-width: 1024px){
+
+    .heroe{
+
+        background-image: url('../images/desktop/image-header.jpg');
+
+    }
+
+}
