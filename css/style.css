@@ -1,15 +1,14 @@
-/* Primary */
-/* graphic design text */
-/* photography text */
-/* footer */
-/* Neutral */
-*, *::after, *::before{
+*{
     margin: 0;
     padding: 0;
 }
 a{
     text-decoration:none;
     color: #202020;
+}
+h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
 }
 h2{
     font-size: 1.8em;
@@ -68,10 +67,14 @@ img, picture{
         text-transform: uppercase;
         font-family: 'Fraunces', serif;
         font-weight: 700;
-        font-size: 0.85em;
+        font-size: 0.85em
 
         
     }
+.btn-header:hover{
+            color:hsl(0, 0%, 100%);
+            background-color: hsl(200deg, 100%, 53%); 
+        }
 .btn-primary{
         font-family: 'Fraunces', serif;
         font-weight: 900
@@ -82,6 +85,7 @@ img, picture{
             position: relative;
             text-transform: uppercase;
             margin-top: 35px
+            
         }
 .btn-primary a::after{
                 content: "";
@@ -130,12 +134,9 @@ img, picture{
                 }
 @media(min-width: 992px){
         .btn-header{
-            background-color: hsl(0, 0%, 100%)
+            background-color: hsl(0, 0%, 100%);
+            
         }
-
-            .btn-header:hover{
-                background-color: hsl(198, 62%, 26%);
-            }
 }
 /* Placeholder Bloque 1, Bloque 2, Bloque 3 */
 /* Placeholder Bloque 1 y Bloque 2 */
@@ -268,21 +269,22 @@ img, picture{
             color: hsl(198, 62%, 26%);
 }
 .b4{
-    padding: 25px 10px;
+    padding: 45px 10px;
 
 }
 .b4__testimonial{
+        box-sizing: border-box;
         display: grid;
         justify-items: center;
-        padding: 15px 25px;
-        margin: 40px 0;
+        padding: 15px 35px;
+        margin: 45px 0;
         text-align: center
 
     }
 .b4__testimonial img{
-            width: 55px;
+            width: 65px;
             height: auto;
-            border-radius: 28px;
+            border-radius: 34px;
             margin-bottom: 25px;
         }
 .b4__testimonial p{
@@ -290,8 +292,136 @@ img, picture{
             margin-bottom: 25px;
         }
 .b4__testimonial h5{
-            font-size: 1em;
+            font-size: 1.15em;
         }
+.b4__testimonial h6{
+            font-family: 'Barlow', sans-serif;
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: hsl(210, 4%, 67%);
+        }
+.b5{
+    order:2;
+}
+.b5 picture img{
+        width: 100%;
+        height: 100%;
+}
+@supports ((-o-object-fit: cover) or (object-fit: cover)){
+        .b5 picture{
+            height: 100%;
+            -o-object-fit: cover;
+               object-fit: cover;
+            -o-object-position: center center;
+               object-position: center center;
+        }
+}
+.b5 > picture{
+        width: calc(100% * 2/4 - (0px - 0px * 2/4));
+        height: 192px;
+}
+.b5 > picture:nth-child(1n){
+        float: left;
+        margin-right: 0px;
+        clear: none;
+}
+.b5 > picture:last-child{
+        margin-right: 0;
+}
+.b5 > picture:nth-child(2n){
+        margin-right: 0;
+        float: right;
+}
+.b5 > picture:nth-child(2n + 1){
+        clear: both;
+}
+.b5:before{
+    order:2;
+}
+.b5:before picture img{
+        width: 100%;
+        height: 100%;
+}
+@supports ((-o-object-fit: cover) or (object-fit: cover)){
+        .b5:before picture{
+            height: 100%;
+            -o-object-fit: cover;
+               object-fit: cover;
+            -o-object-position: center center;
+               object-position: center center;
+        }
+}
+.b5:before > picture{
+    
+    }
+.b5:before{
+    content: '';
+    display: table;
+}
+.b5:after{
+    order:2;
+}
+.b5:after picture img{
+        width: 100%;
+        height: 100%;
+}
+@supports ((-o-object-fit: cover) or (object-fit: cover)){
+        .b5:after picture{
+            height: 100%;
+            -o-object-fit: cover;
+               object-fit: cover;
+            -o-object-position: center center;
+               object-position: center center;
+        }
+}
+.b5:after > picture{
+    
+    }
+.b5:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.footer{
+    display: grid;
+    justify-items: center;
+    background-color: hsla(168deg, 34%, 41%, 0.47);    
+    padding-top: 65px;
+    padding-bottom: 95px;
+
+
+
+}
+.footer__logo{
+        margin-bottom: 28px
+    }
+.footer__logo svg path{
+            fill: hsl(168, 34%, 41%);            
+        }
+.footer__menu{
+        display: flex
+    }
+.footer__menu a{
+            color:hsl(168, 34%, 41%);    
+            margin: 0 25px;
+            font-family: 'Barlow', sans-serif
+        }
+.footer__menu a:hover{
+                color: hsl(0, 0%, 100%);
+            }
+.footer__social-media{
+        display: flex;
+        margin-top: 75px
+
+    }
+.footer__social-media a{
+            margin: 0 15px;
+            width: 20px        
+            
+        }
+.footer__social-media a svg path:hover{
+                fill:hsl(0, 0%, 100%);
+            }
 @media(max-width: 991px){
         .header__menu-mobile{        
 
@@ -307,7 +437,9 @@ img, picture{
             width: 100%;
             max-width: 300px;
             padding: 20px 0;
-            background-color: white                     
+            background-color: white;
+
+            font-family: 'Barlow', sans-serif                     
     
         }
             
@@ -507,12 +639,88 @@ img, picture{
 
     .b3__text1{
             background-image: url("../images/desktop/image-graphic-design.jpg");
+            order:1;
+            padding: 5% 8%;
+            text-align:left;
+            text-align: center;
     }
 
     .b3__text2{
             background-image: url("../images/desktop/image-photography.jpg");
+            order:1;
+            padding: 5% 8%;
+            text-align:left;
+            text-align: center;
     }
 
+    .b4{
+        padding: 7% 6%;
+    }
     
+        .b4__container-testimonials > div{
+            width: calc(99.9% * 1/3 - (0px - 0px * 1/3));
+            
+        }
+    
+        .b4__container-testimonials > div:nth-child(1n){
+            float: left;
+            margin-right: 0px;
+            clear: none;
+            
+        }
+    
+        .b4__container-testimonials > div:last-child{
+            margin-right: 0;
+            
+        }
+    
+        .b4__container-testimonials > div:nth-child(3n){
+            margin-right: 0;
+            float: right;
+            
+        }
+    
+        .b4__container-testimonials > div:nth-child(3n + 1){
+            clear: both;
+            
+        }
+    
+        .b4:before__container-testimonials > div{
+            
+        }
+    
+        .b4:before{
+        content: '';
+        display: table;
+    }
+    
+        .b4:after__container-testimonials > div{
+            
+        }
+    
+        .b4:after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+        .b5 > picture{
+            width: calc(100% * 1/4 - (0px - 0px * 1/4));
+            height: auto;
+        }
+        .b5 > picture:nth-child(1n){
+            float: left;
+            margin-right: 0px;
+            clear: none;
+        }
+        .b5 > picture:last-child{
+            margin-right: 0;
+        }
+        .b5 > picture:nth-child(4n){
+            margin-right: 0;
+            float: right;
+        }
+        .b5 > picture:nth-child(4n + 1){
+            clear: both;
+        }
 
 }
