@@ -1,3 +1,8 @@
+/* Primary */
+/* graphic design text */
+/* photography text */
+/* footer */
+/* Neutral */
 *{
     margin: 0;
     padding: 0;
@@ -47,7 +52,7 @@ h6{
 p{
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
-    font-size: 1.01em;
+    font-size: 0.98em;
     color: hsl(210, 4%, 67%);
     line-height: 26px;
 }
